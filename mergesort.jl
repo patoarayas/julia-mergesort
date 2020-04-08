@@ -1,7 +1,7 @@
 import Base.Threads.@spawn
 
 
-function secuential_mergesort!(arr)
+function sequential_mergesort!(arr)
 
     if length(arr) == 1
 
@@ -13,8 +13,8 @@ function secuential_mergesort!(arr)
     fin = length(arr)
 
 
-    izq = secuential_mergesort!(arr[1:med])
-    der = secuential_mergesort!(arr[med+1:fin])
+    izq = sequential_mergesort!(arr[1:med])
+    der = sequential_mergesort!(arr[med+1:fin])
 
     #merge
     temp = Array{Int}(undef, fin)
@@ -82,7 +82,7 @@ function cutoff_parallel_mergesort!(arr)
 
     # if largo array es < a 10000 ordenar secuencial
     if (length(arr) < 100000)
-        return secuential_mergesort!(arr)
+        return sequential_mergesort!(arr)
     end
 
     # dividir
