@@ -1,3 +1,5 @@
+Array size: 1000000
+
 1 31.527113 seconds (153.11 M allocations: 6.750 GiB, 35.36% gc time)
 2 15.184621 seconds (154.93 M allocations: 4.651 GiB, 22.93% gc time)
 3 10.043917 seconds (154.76 M allocations: 4.320 GiB, 23.52% gc time)
